@@ -1445,6 +1445,11 @@
     amazon-cognito-identity-js "^6.1.2"
     nodemailer "6.9.8"
 
+"@payloadcms/plugin-seo@^2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@payloadcms/plugin-seo/-/plugin-seo-2.3.2.tgz#5785030fe10f0a546fffafe5510ed65735d01974"
+  integrity sha512-wlYxY36CRDQQBSgpdvfNlovqw7qYp0jo5ORbkWZl7eeAliUl58ng7SEapRiihYWfqfPQ+eQOs2yL7CNz0GAvLg==
+
 "@payloadcms/richtext-slate@^1.0.0":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@payloadcms/richtext-slate/-/richtext-slate-1.5.2.tgz#3611923b7a1d62882a10b2df3508f98cb8a11dbf"

@@ -13,6 +13,7 @@ import {Footer} from "./globals/Footer";
 import {Settings} from "./globals/Settings";
 import {Redirects} from "./collections/Redirects";
 import {ReusableContent} from "./collections/ReusableContent";
+import seoPlugin from '@payloadcms/plugin-seo';
 
 export default buildConfig({
   admin: {
@@ -28,7 +29,15 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
   },
-  plugins: [payloadCloud()],
+  plugins: [
+      payloadCloud(),
+    seoPlugin({
+      collections: [
+        'pages',
+      ],
+      uploadsCollection: 'media',
+    })
+  ],
   db: mongooseAdapter({
     url: process.env.DATABASE_URI,
   }),
