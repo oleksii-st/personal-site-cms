@@ -4,6 +4,7 @@ import { admins } from '../../access/admins'
 import { adminsOrPublished } from '../../access/adminsOrPublished'
 import { slugField } from '../../fields/slug'
 import { revalidatePage } from './hooks/revalidatePage'
+import {Hero} from "../../blocks/Hero";
 
 export const Pages: CollectionConfig = {
     slug: 'pages',
@@ -51,7 +52,9 @@ export const Pages: CollectionConfig = {
                             name: 'layout',
                             type: 'blocks',
                             required: true,
-                            blocks: [],
+                            blocks: [
+                                Hero
+                            ],
                         },
                     ],
                 },
