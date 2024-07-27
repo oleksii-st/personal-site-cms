@@ -8,6 +8,8 @@ import { buildConfig } from 'payload/config'
 import Users from "./collections/Users";
 import {Pages} from "./collections/Pages";
 import {Media} from "./collections/Media";
+import {Header} from "./globals/Header";
+import {Footer} from "./globals/Footer";
 
 export default buildConfig({
   admin: {
@@ -16,6 +18,7 @@ export default buildConfig({
   },
   editor: slateEditor({}),
   collections: [Media, Pages, Users],
+  globals: [Header, Footer],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
