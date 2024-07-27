@@ -14,6 +14,7 @@ import {Settings} from "./globals/Settings";
 import {Redirects} from "./collections/Redirects";
 import {ReusableContent} from "./collections/ReusableContent";
 import seoPlugin from '@payloadcms/plugin-seo';
+import nestedDocs from '@payloadcms/plugin-nested-docs'
 
 export default buildConfig({
   admin: {
@@ -36,7 +37,12 @@ export default buildConfig({
         'pages',
       ],
       uploadsCollection: 'media',
-    })
+    }),
+    nestedDocs({
+      collections: ['pages'],
+      generateLabel: (_, doc) => String(doc.title),
+      generateURL: (docs) => docs.reduce((url, doc) => `${url}/${doc.slug}`, ''),
+    }),
   ],
   db: mongooseAdapter({
     url: process.env.DATABASE_URI,

@@ -3,7 +3,6 @@ import type { CollectionConfig } from 'payload/types'
 import { admins } from '../../access/admins'
 import { adminsOrPublished } from '../../access/adminsOrPublished'
 import { slugField } from '../../fields/slug'
-import { revalidatePage } from './hooks/revalidatePage'
 import {Hero} from "../../blocks/Hero";
 
 export const Pages: CollectionConfig = {
@@ -16,9 +15,6 @@ export const Pages: CollectionConfig = {
                 `${process.env.PAYLOAD_PUBLIC_SERVER_URL}/${doc.slug !== 'home' ? doc.slug : ''}`,
             )}&secret=${process.env.PAYLOAD_PUBLIC_DRAFT_SECRET}`
         },
-    },
-    hooks: {
-        afterChange: [revalidatePage],
     },
     versions: {
         drafts: true,
