@@ -11,6 +11,7 @@ import {Media} from "./collections/Media";
 import {Header} from "./globals/Header";
 import {Footer} from "./globals/Footer";
 import {Settings} from "./globals/Settings";
+import {Redirects} from "./collections/Redirects";
 
 export default buildConfig({
   admin: {
@@ -18,7 +19,7 @@ export default buildConfig({
     bundler: webpackBundler(),
   },
   editor: slateEditor({}),
-  collections: [Media, Pages, Users],
+  collections: [Media, Pages, Redirects, Users],
   globals: [Header, Footer, Settings],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
