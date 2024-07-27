@@ -1,12 +1,11 @@
 import path from 'path'
 
 import { payloadCloud } from '@payloadcms/plugin-cloud'
-import { mongooseAdapter } from '@payloadcms/db-mongodb' // database-adapter-import
-import { webpackBundler } from '@payloadcms/bundler-webpack' // bundler-import
-import { slateEditor } from '@payloadcms/richtext-slate' // editor-import
+import { mongooseAdapter } from '@payloadcms/db-mongodb'
+import { webpackBundler } from '@payloadcms/bundler-webpack'
+import { slateEditor } from '@payloadcms/richtext-slate'
 import { buildConfig } from 'payload/config'
-
-import Users from './collections/Users'
+import Users from "./collections/Users";
 
 export default buildConfig({
   admin: {
@@ -22,9 +21,7 @@ export default buildConfig({
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
   },
   plugins: [payloadCloud()],
-  // database-adapter-config-start
   db: mongooseAdapter({
     url: process.env.DATABASE_URI,
   }),
-  // database-adapter-config-end
 })
