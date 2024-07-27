@@ -10,6 +10,7 @@ import {Pages} from "./collections/Pages";
 import {Media} from "./collections/Media";
 import {Header} from "./globals/Header";
 import {Footer} from "./globals/Footer";
+import {Settings} from "./globals/Settings";
 
 export default buildConfig({
   admin: {
@@ -18,7 +19,7 @@ export default buildConfig({
   },
   editor: slateEditor({}),
   collections: [Media, Pages, Users],
-  globals: [Header, Footer],
+  globals: [Header, Footer, Settings],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
