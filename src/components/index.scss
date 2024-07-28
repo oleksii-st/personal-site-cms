@@ -1,0 +1,14 @@
+.color-picker {
+  .color-picker-row {
+    display: flex;
+    gap: 16px;
+
+    input {
+      height: 50px;
+    }
+
+    .field-type {
+      width: 100%;
+    }
+  }
+}

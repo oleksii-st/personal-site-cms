@@ -1,4 +1,5 @@
 import type { GlobalConfig } from 'payload/types';
+import color from '../fields/color';
 
 export const Settings: GlobalConfig = {
   slug: 'settings',
@@ -36,27 +37,21 @@ export const Settings: GlobalConfig = {
       type: 'collapsible',
       label: 'Colors',
       fields: [
-        {
-          type: 'text',
+        color({
           name: 'backgroundColor',
           label: 'Background color',
-          required: true,
           defaultValue: '#FFFFFF',
-        },
-        {
-          type: 'text',
+        }),
+        color({
           name: 'textColor',
           label: 'Text color',
-          required: true,
           defaultValue: '#141414',
-        },
-        {
-          type: 'text',
+        }),
+        color({
           name: 'headingsColor',
           label: 'Headings color',
-          required: true,
           defaultValue: '#000000',
-        },
+        }),
       ],
     },
   ],
