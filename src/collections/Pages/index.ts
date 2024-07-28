@@ -7,6 +7,7 @@ import { Hero } from '../../blocks/Hero';
 import { Features } from '../../blocks/Features';
 import { Optimization } from '../../blocks/Optimization';
 import { Socials } from '../../blocks/Socials';
+import { Contact } from '../../blocks/Contact';
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -51,7 +52,7 @@ export const Pages: CollectionConfig = {
               name: 'layout',
               type: 'blocks',
               required: true,
-              blocks: [Hero, Features, Optimization, Socials],
+              blocks: [Hero, Features, Optimization, Socials, Contact],
             },
           ],
         },
