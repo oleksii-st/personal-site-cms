@@ -5,6 +5,7 @@ import { adminsOrPublished } from '../../access/adminsOrPublished';
 import { slugField } from '../../fields/slug';
 import { Hero } from '../../blocks/Hero';
 import { Features } from '../../blocks/Features';
+import { Optimization } from '../../blocks/Optimization';
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -49,7 +50,7 @@ export const Pages: CollectionConfig = {
               name: 'layout',
               type: 'blocks',
               required: true,
-              blocks: [Hero, Features],
+              blocks: [Hero, Features, Optimization],
             },
           ],
         },
