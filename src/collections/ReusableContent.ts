@@ -4,6 +4,7 @@ import { Hero } from '../blocks/Hero';
 import { admins } from '../access/admins';
 import { Features } from '../blocks/Features';
 import { Optimization } from '../blocks/Optimization';
+import { Socials } from '../blocks/Socials';
 
 export const ReusableContent: CollectionConfig = {
   slug: 'reusable-content',
@@ -31,7 +32,7 @@ export const ReusableContent: CollectionConfig = {
       name: 'layout',
       type: 'blocks',
       required: true,
-      blocks: [Hero, Features, Optimization],
+      blocks: [Hero, Features, Optimization, Socials],
     },
   ],
 };
