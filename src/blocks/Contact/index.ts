@@ -3,7 +3,7 @@ import { blockLayout } from '../../fields/blockLayout';
 
 export const Contact: Block = {
   imageURL: '/media/Contact.png',
-  slug: 'Contact',
+  slug: 'contact',
   labels: {
     singular: 'Contact',
     plural: 'Contacts',
