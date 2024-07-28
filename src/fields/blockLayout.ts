@@ -3,6 +3,12 @@ import { Field } from 'payload/types';
 export const blockLayout = (): Field[] => {
   return [
     {
+      type: 'checkbox',
+      name: 'hideBlock',
+      label: 'Hide block',
+      defaultValue: false
+    },
+    {
       type: 'number',
       name: 'paddingTop',
       label: 'Padding top',
