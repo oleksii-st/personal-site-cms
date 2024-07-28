@@ -6,7 +6,7 @@ export const blockLayout = (): Field[] => {
       type: 'checkbox',
       name: 'hideBlock',
       label: 'Hide block',
-      defaultValue: false
+      defaultValue: false,
     },
     {
       type: 'number',
