@@ -5,7 +5,7 @@
 To spin up the project locally, follow these steps:
 
 1. First clone the repo
-1.  `yarn && yarn dev` (or `docker-compose up`, see [Docker](#docker))
+1. `yarn && yarn dev` (or `docker-compose up`, see [Docker](#docker))
 1. Now `open http://localhost:3000/admin` to access the admin panel
 1. Create your first admin user using the form on the page
 

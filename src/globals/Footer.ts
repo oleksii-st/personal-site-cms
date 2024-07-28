@@ -1,38 +1,38 @@
-import type { GlobalConfig } from 'payload/types'
+import type { GlobalConfig } from 'payload/types';
 
-import link from '../fields/link'
+import link from '../fields/link';
 
 export const Footer: GlobalConfig = {
-    slug: 'footer',
-    access: {
-        read: () => true,
-    },
-    fields: [
+  slug: 'footer',
+  access: {
+    read: () => true,
+  },
+  fields: [
+    {
+      type: 'array',
+      name: 'columns',
+      label: 'Columns',
+      fields: [
         {
-            type: 'array',
-            name: 'columns',
-            label: 'Columns',
-            fields: [
-                {
-                    type: 'array',
-                    name: 'navItems',
-                    maxRows: 6,
-                    fields: [
-                        link({
-                            appearances: false,
-                        }),
-                    ]
-                },
-            ]
+          type: 'array',
+          name: 'navItems',
+          maxRows: 6,
+          fields: [
+            link({
+              appearances: false,
+            }),
+          ],
         },
-            {
-            type: 'text',
-            name: 'copyright',
-            label: 'Copyright',
-            defaultValue: '© {{year}}. All rights reserved',
-            admin: {
-                description: 'Use {{year}} for current year'
-            }
-        }
-    ],
-}
+      ],
+    },
+    {
+      type: 'text',
+      name: 'copyright',
+      label: 'Copyright',
+      defaultValue: '© {{year}}. All rights reserved',
+      admin: {
+        description: 'Use {{year}} for current year',
+      },
+    },
+  ],
+};

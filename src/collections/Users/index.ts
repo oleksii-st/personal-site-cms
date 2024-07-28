@@ -1,10 +1,10 @@
-import { CollectionConfig } from 'payload/types'
-import adminsAndUser from "./access/adminsAndUsers";
-import {anyone} from "../../access/anyone";
-import {admins} from "../../access/admins";
-import {checkRole} from "./checkRole";
-import {loginAfterCreate} from "./hooks/loginAfterCreate";
-import {ensureFirstUserIsAdmin} from "./hooks/ensureFirstUserIsAdmin";
+import { CollectionConfig } from 'payload/types';
+import adminsAndUser from './access/adminsAndUsers';
+import { anyone } from '../../access/anyone';
+import { admins } from '../../access/admins';
+import { checkRole } from './checkRole';
+import { loginAfterCreate } from './hooks/loginAfterCreate';
+import { ensureFirstUserIsAdmin } from './hooks/ensureFirstUserIsAdmin';
 
 const Index: CollectionConfig = {
   slug: 'users',
@@ -54,6 +54,6 @@ const Index: CollectionConfig = {
     },
   ],
   timestamps: true,
-}
+};
 
-export default Index
+export default Index;
