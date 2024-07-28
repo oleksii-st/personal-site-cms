@@ -1,4 +1,5 @@
 import type { Block } from 'payload/types';
+import { blockLayout } from '../../fields/blockLayout';
 
 export const Hero: Block = {
   imageURL: '/media/Hero.png',
@@ -26,5 +27,6 @@ export const Hero: Block = {
       name: 'subheading',
       label: 'Subheading',
     },
+    ...blockLayout(),
   ],
 };
