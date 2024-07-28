@@ -54,6 +54,12 @@ export const Pages: CollectionConfig = {
         },
       ],
     },
+    {
+      type: 'checkbox',
+      name: 'disableIndex',
+      label: 'Disable index',
+      defaultValue: false,
+    },
     slugField(),
   ],
 };
