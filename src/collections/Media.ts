@@ -1,6 +1,5 @@
 import path from 'path';
 import type { CollectionConfig } from 'payload/types';
-import { adminsOrPublished } from '../access/adminsOrPublished';
 import { admins } from '../access/admins';
 
 export const Media: CollectionConfig = {
@@ -9,7 +8,7 @@ export const Media: CollectionConfig = {
     staticDir: path.resolve(__dirname, '../../media'),
   },
   access: {
-    read: adminsOrPublished,
+    read: () => true,
     update: admins,
     create: admins,
     delete: admins,
