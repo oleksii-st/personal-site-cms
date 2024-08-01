@@ -15,6 +15,7 @@ import { Redirects } from './collections/Redirects';
 import { ReusableContent } from './collections/ReusableContent';
 import seoPlugin from '@payloadcms/plugin-seo';
 import nestedDocs from '@payloadcms/plugin-nested-docs';
+import { NotFound } from './globals/NotFound';
 
 export default buildConfig({
   admin: {
@@ -23,10 +24,10 @@ export default buildConfig({
   },
   editor: slateEditor({}),
   collections: [Media, Pages, ReusableContent, Redirects, Users],
-  globals: [Header, Footer, Settings],
+  globals: [Header, Footer, NotFound, Settings],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
-    declare: false
+    declare: false,
   },
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
