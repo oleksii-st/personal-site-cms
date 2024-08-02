@@ -8,6 +8,7 @@ export const RichText: Block = {
     singular: 'RichText',
     plural: 'RichTexts',
   },
+  interfaceName: 'Richtext',
   fields: [
     {
       type: 'text',

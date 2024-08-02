@@ -8,6 +8,7 @@ export const Contact: Block = {
     singular: 'Contact',
     plural: 'Contacts',
   },
+  interfaceName: 'Contact',
   fields: [
     {
       type: 'text',

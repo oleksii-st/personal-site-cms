@@ -9,6 +9,7 @@ export const Experience: Block = {
     singular: 'Experience',
     plural: 'Experiences',
   },
+  interfaceName: 'Experience',
   fields: [
     {
       type: 'text',

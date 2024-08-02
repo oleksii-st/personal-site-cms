@@ -8,6 +8,7 @@ export const Hero: Block = {
     singular: 'Hero',
     plural: 'Heroes',
   },
+  interfaceName: 'Hero',
   fields: [
     {
       type: 'upload',

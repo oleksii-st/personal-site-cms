@@ -8,6 +8,7 @@ export const Optimization: Block = {
     singular: 'Optimization',
     plural: 'Optimizations',
   },
+  interfaceName: 'Optimization',
   fields: [
     {
       type: 'text',

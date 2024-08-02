@@ -10,7 +10,7 @@ export const NotFound: GlobalConfig = {
       type: 'text',
       name: 'heading',
       label: 'Heading',
-      defaultValue: '404 Not Found'
+      defaultValue: '404 Not Found',
     },
     {
       type: 'richText',

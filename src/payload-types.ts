@@ -49,175 +49,7 @@ export interface Page {
   id: string;
   title: string;
   publishedAt?: string | null;
-  layout: (
-    | {
-        image: string | Media;
-        heading: string;
-        subheading?: string | null;
-        hideBlock?: boolean | null;
-        paddingTop?: number | null;
-        paddingBottom?: number | null;
-        breakpoints?:
-          | {
-              breakpoint?: number | null;
-              paddingTop?: number | null;
-              paddingBottom?: number | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'hero';
-      }
-    | {
-        heading?: string | null;
-        features?:
-          | {
-              icon: string | Media;
-              id?: string | null;
-            }[]
-          | null;
-        hideBlock?: boolean | null;
-        paddingTop?: number | null;
-        paddingBottom?: number | null;
-        breakpoints?:
-          | {
-              breakpoint?: number | null;
-              paddingTop?: number | null;
-              paddingBottom?: number | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'features';
-      }
-    | {
-        heading?: string | null;
-        image: string | Media;
-        description?: string | null;
-        hideBlock?: boolean | null;
-        paddingTop?: number | null;
-        paddingBottom?: number | null;
-        breakpoints?:
-          | {
-              breakpoint?: number | null;
-              paddingTop?: number | null;
-              paddingBottom?: number | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'optimization';
-      }
-    | {
-        heading?: string | null;
-        socials?:
-          | {
-              link?: {
-                type?: ('reference' | 'custom') | null;
-                newTab?: boolean | null;
-                reference?: {
-                  relationTo: 'pages';
-                  value: string | Page;
-                } | null;
-                url?: string | null;
-              };
-              icon: string | Media;
-              id?: string | null;
-            }[]
-          | null;
-        hideBlock?: boolean | null;
-        paddingTop?: number | null;
-        paddingBottom?: number | null;
-        breakpoints?:
-          | {
-              breakpoint?: number | null;
-              paddingTop?: number | null;
-              paddingBottom?: number | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'socials';
-      }
-    | {
-        heading?: string | null;
-        nameLabel: string;
-        emailLabel: string;
-        topicLabel: string;
-        messageLabel: string;
-        hideBlock?: boolean | null;
-        paddingTop?: number | null;
-        paddingBottom?: number | null;
-        breakpoints?:
-          | {
-              breakpoint?: number | null;
-              paddingTop?: number | null;
-              paddingBottom?: number | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'contact';
-      }
-    | {
-        heading?: string | null;
-        jobs?:
-          | {
-              link: {
-                type?: ('reference' | 'custom') | null;
-                newTab?: boolean | null;
-                reference?: {
-                  relationTo: 'pages';
-                  value: string | Page;
-                } | null;
-                url?: string | null;
-                label: string;
-              };
-              icon: string | Media;
-              id?: string | null;
-            }[]
-          | null;
-        hideBlock?: boolean | null;
-        paddingTop?: number | null;
-        paddingBottom?: number | null;
-        breakpoints?:
-          | {
-              breakpoint?: number | null;
-              paddingTop?: number | null;
-              paddingBottom?: number | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'experience';
-      }
-    | {
-        heading?: string | null;
-        content: {
-          [k: string]: unknown;
-        }[];
-        hideBlock?: boolean | null;
-        paddingTop?: number | null;
-        paddingBottom?: number | null;
-        breakpoints?:
-          | {
-              breakpoint?: number | null;
-              paddingTop?: number | null;
-              paddingBottom?: number | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'richText';
-      }
-  )[];
+  layout: (Hero | Features | Optimization | Socials | Contact | Experience | Richtext)[];
   disableIndex?: boolean | null;
   slug?: string | null;
   meta?: {
@@ -240,180 +72,207 @@ export interface Page {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Hero".
+ */
+export interface Hero {
+  image: string | Media;
+  heading: string;
+  subheading?: string | null;
+  hideBlock?: boolean | null;
+  paddingTop?: number | null;
+  paddingBottom?: number | null;
+  breakpoints?:
+    | {
+        breakpoint?: number | null;
+        paddingTop?: number | null;
+        paddingBottom?: number | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'hero';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Features".
+ */
+export interface Features {
+  heading?: string | null;
+  features?:
+    | {
+        icon: string | Media;
+        id?: string | null;
+      }[]
+    | null;
+  hideBlock?: boolean | null;
+  paddingTop?: number | null;
+  paddingBottom?: number | null;
+  breakpoints?:
+    | {
+        breakpoint?: number | null;
+        paddingTop?: number | null;
+        paddingBottom?: number | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'features';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Optimization".
+ */
+export interface Optimization {
+  heading?: string | null;
+  image: string | Media;
+  description?: string | null;
+  hideBlock?: boolean | null;
+  paddingTop?: number | null;
+  paddingBottom?: number | null;
+  breakpoints?:
+    | {
+        breakpoint?: number | null;
+        paddingTop?: number | null;
+        paddingBottom?: number | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'optimization';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Socials".
+ */
+export interface Socials {
+  heading?: string | null;
+  socials?:
+    | {
+        link?: {
+          type?: ('reference' | 'custom') | null;
+          newTab?: boolean | null;
+          reference?: {
+            relationTo: 'pages';
+            value: string | Page;
+          } | null;
+          url?: string | null;
+        };
+        icon: string | Media;
+        id?: string | null;
+      }[]
+    | null;
+  hideBlock?: boolean | null;
+  paddingTop?: number | null;
+  paddingBottom?: number | null;
+  breakpoints?:
+    | {
+        breakpoint?: number | null;
+        paddingTop?: number | null;
+        paddingBottom?: number | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'socials';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Contact".
+ */
+export interface Contact {
+  heading?: string | null;
+  nameLabel: string;
+  emailLabel: string;
+  topicLabel: string;
+  messageLabel: string;
+  hideBlock?: boolean | null;
+  paddingTop?: number | null;
+  paddingBottom?: number | null;
+  breakpoints?:
+    | {
+        breakpoint?: number | null;
+        paddingTop?: number | null;
+        paddingBottom?: number | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'contact';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Experience".
+ */
+export interface Experience {
+  heading?: string | null;
+  jobs?:
+    | {
+        link: {
+          type?: ('reference' | 'custom') | null;
+          newTab?: boolean | null;
+          reference?: {
+            relationTo: 'pages';
+            value: string | Page;
+          } | null;
+          url?: string | null;
+          label: string;
+        };
+        icon: string | Media;
+        id?: string | null;
+      }[]
+    | null;
+  hideBlock?: boolean | null;
+  paddingTop?: number | null;
+  paddingBottom?: number | null;
+  breakpoints?:
+    | {
+        breakpoint?: number | null;
+        paddingTop?: number | null;
+        paddingBottom?: number | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'experience';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Richtext".
+ */
+export interface Richtext {
+  heading?: string | null;
+  content: {
+    [k: string]: unknown;
+  }[];
+  hideBlock?: boolean | null;
+  paddingTop?: number | null;
+  paddingBottom?: number | null;
+  breakpoints?:
+    | {
+        breakpoint?: number | null;
+        paddingTop?: number | null;
+        paddingBottom?: number | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'richText';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "reusable-content".
  */
 export interface ReusableContent {
   id: string;
   title: string;
-  layout: (
-    | {
-        image: string | Media;
-        heading: string;
-        subheading?: string | null;
-        hideBlock?: boolean | null;
-        paddingTop?: number | null;
-        paddingBottom?: number | null;
-        breakpoints?:
-          | {
-              breakpoint?: number | null;
-              paddingTop?: number | null;
-              paddingBottom?: number | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'hero';
-      }
-    | {
-        heading?: string | null;
-        features?:
-          | {
-              icon: string | Media;
-              id?: string | null;
-            }[]
-          | null;
-        hideBlock?: boolean | null;
-        paddingTop?: number | null;
-        paddingBottom?: number | null;
-        breakpoints?:
-          | {
-              breakpoint?: number | null;
-              paddingTop?: number | null;
-              paddingBottom?: number | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'features';
-      }
-    | {
-        heading?: string | null;
-        image: string | Media;
-        description?: string | null;
-        hideBlock?: boolean | null;
-        paddingTop?: number | null;
-        paddingBottom?: number | null;
-        breakpoints?:
-          | {
-              breakpoint?: number | null;
-              paddingTop?: number | null;
-              paddingBottom?: number | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'optimization';
-      }
-    | {
-        heading?: string | null;
-        socials?:
-          | {
-              link?: {
-                type?: ('reference' | 'custom') | null;
-                newTab?: boolean | null;
-                reference?: {
-                  relationTo: 'pages';
-                  value: string | Page;
-                } | null;
-                url?: string | null;
-              };
-              icon: string | Media;
-              id?: string | null;
-            }[]
-          | null;
-        hideBlock?: boolean | null;
-        paddingTop?: number | null;
-        paddingBottom?: number | null;
-        breakpoints?:
-          | {
-              breakpoint?: number | null;
-              paddingTop?: number | null;
-              paddingBottom?: number | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'socials';
-      }
-    | {
-        heading?: string | null;
-        nameLabel: string;
-        emailLabel: string;
-        topicLabel: string;
-        messageLabel: string;
-        hideBlock?: boolean | null;
-        paddingTop?: number | null;
-        paddingBottom?: number | null;
-        breakpoints?:
-          | {
-              breakpoint?: number | null;
-              paddingTop?: number | null;
-              paddingBottom?: number | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'contact';
-      }
-    | {
-        heading?: string | null;
-        jobs?:
-          | {
-              link: {
-                type?: ('reference' | 'custom') | null;
-                newTab?: boolean | null;
-                reference?: {
-                  relationTo: 'pages';
-                  value: string | Page;
-                } | null;
-                url?: string | null;
-                label: string;
-              };
-              icon: string | Media;
-              id?: string | null;
-            }[]
-          | null;
-        hideBlock?: boolean | null;
-        paddingTop?: number | null;
-        paddingBottom?: number | null;
-        breakpoints?:
-          | {
-              breakpoint?: number | null;
-              paddingTop?: number | null;
-              paddingBottom?: number | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'experience';
-      }
-    | {
-        heading?: string | null;
-        content: {
-          [k: string]: unknown;
-        }[];
-        hideBlock?: boolean | null;
-        paddingTop?: number | null;
-        paddingBottom?: number | null;
-        breakpoints?:
-          | {
-              breakpoint?: number | null;
-              paddingTop?: number | null;
-              paddingBottom?: number | null;
-              id?: string | null;
-            }[]
-          | null;
-        id?: string | null;
-        blockName?: string | null;
-        blockType: 'richText';
-      }
-  )[];
+  layout: (Hero | Features | Optimization | Socials | Contact | Experience | Richtext)[];
   updatedAt: string;
   createdAt: string;
 }

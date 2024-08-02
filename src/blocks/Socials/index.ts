@@ -9,6 +9,7 @@ export const Socials: Block = {
     singular: 'Socials',
     plural: 'Socials',
   },
+  interfaceName: 'Socials',
   fields: [
     {
       type: 'text',

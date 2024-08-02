@@ -8,6 +8,7 @@ export const Features: Block = {
     singular: 'Features',
     plural: 'Features',
   },
+  interfaceName: 'Features',
   fields: [
     {
       type: 'text',
