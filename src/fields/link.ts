@@ -2,14 +2,12 @@ import type { Field } from 'payload/types';
 
 import deepMerge from '../utilities/deepMerge';
 
-export type LinkAppearances = 'primary' | 'secondary' | 'default';
-
 type LinkType = (options?: {
   disableLabel?: boolean;
   overrides?: Record<string, unknown>;
 }) => Field;
 
-const link: LinkType = ({ disableLabel = false, overrides = {} } = {}) => {
+const link: LinkType = ({ overrides = {} } = {}) => {
   const linkResult: Field = {
     name: 'link',
     type: 'group',
@@ -90,33 +88,28 @@ const link: LinkType = ({ disableLabel = false, overrides = {} } = {}) => {
     },
   ];
 
-  if (!disableLabel) {
-    linkTypes.map((linkType) => ({
-      ...linkType,
-      admin: {
-        ...linkType.admin,
-        width: '50%',
-      },
-    }));
+  linkTypes.map((linkType) => ({
+    ...linkType,
+    admin: {
+      ...linkType.admin,
+      width: '50%',
+    },
+  }));
 
-    linkResult.fields.push({
-      type: 'row',
-      fields: [
-        ...linkTypes,
-        {
-          name: 'label',
-          label: 'Label',
-          type: 'text',
-          required: true,
-          admin: {
-            width: '50%',
-          },
+  linkResult.fields.push({
+    type: 'row',
+    fields: [
+      ...linkTypes,
+      {
+        name: 'label',
+        label: 'Label',
+        type: 'text',
+        admin: {
+          width: '50%',
         },
-      ],
-    });
-  } else {
-    linkResult.fields = [...linkResult.fields, ...linkTypes];
-  }
+      },
+    ],
+  });
 
   return deepMerge(linkResult, overrides);
 };

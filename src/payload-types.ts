@@ -193,7 +193,7 @@ export interface Link {
     value: string | Page;
   } | null;
   url?: string | null;
-  label: string;
+  label?: string | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -228,7 +228,7 @@ export interface Experience {
   heading?: string | null;
   jobs?:
     | {
-        link: Link;
+        link?: Link;
         icon: string | Media;
         id?: string | null;
       }[]
@@ -377,7 +377,7 @@ export interface Footer {
     | {
         navItems?:
           | {
-              link: Link;
+              link?: Link;
               id?: string | null;
             }[]
           | null;

@@ -22,7 +22,7 @@ export const Socials: Block = {
       label: 'Socials',
       minRows: 2,
       fields: [
-        link({ disableLabel: true }),
+        link(),
         {
           type: 'upload',
           relationTo: 'media',
