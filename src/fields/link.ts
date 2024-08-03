@@ -36,7 +36,7 @@ const link: LinkType = ({ disableLabel = false, overrides = {} } = {}) => {
             defaultValue: 'reference',
             admin: {
               layout: 'horizontal',
-              width: '50%',
+              width: '33.333%',
             },
           },
           {
@@ -44,7 +44,18 @@ const link: LinkType = ({ disableLabel = false, overrides = {} } = {}) => {
             label: 'Open in new tab',
             type: 'checkbox',
             admin: {
-              width: '50%',
+              width: '33.333%',
+              style: {
+                alignSelf: 'flex-end',
+              },
+            },
+          },
+          {
+            name: 'disableIndex',
+            label: 'Disable indexation for search engines',
+            type: 'checkbox',
+            admin: {
+              width: '33.333%',
               style: {
                 alignSelf: 'flex-end',
               },
