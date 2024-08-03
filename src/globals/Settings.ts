@@ -22,7 +22,7 @@ export const Settings: GlobalConfig = {
           name: 'container',
           label: 'Container',
           required: true,
-          defaultValue: 1620,
+          defaultValue: 1440,
         },
         {
           type: 'number',
