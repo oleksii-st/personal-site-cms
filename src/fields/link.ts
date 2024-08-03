@@ -13,6 +13,7 @@ const link: LinkType = ({ disableLabel = false, overrides = {} } = {}) => {
   const linkResult: Field = {
     name: 'link',
     type: 'group',
+    interfaceName: 'Link',
     admin: {
       hideGutter: true,
     },
