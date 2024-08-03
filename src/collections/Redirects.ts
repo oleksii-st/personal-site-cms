@@ -1,11 +1,10 @@
 import type { CollectionConfig } from 'payload/types';
-import { adminsOrPublished } from '../access/adminsOrPublished';
 import { admins } from '../access/admins';
 
 export const Redirects: CollectionConfig = {
   slug: 'redirects',
   access: {
-    read: adminsOrPublished,
+    read: () => true,
     update: admins,
     create: admins,
     delete: admins,
