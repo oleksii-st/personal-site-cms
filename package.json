@@ -16,7 +16,11 @@
     "payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\"",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,json,md}": "yarn format"
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^14.2.5",
@@ -31,6 +35,7 @@
     "eslint-define-config": "^2.1.0",
     "eslint-plugin-perfectionist": "^3.0.0",
     "express": "^4.19.2",
+    "husky": "^9.1.4",
     "payload": "^2.0.0"
   },
   "devDependencies": {
@@ -42,6 +47,7 @@
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "lint-staged": "^15.2.8",
     "nodemon": "^2.0.6",
     "prettier": "^3.3.3",
     "ts-node": "^9.1.1",
