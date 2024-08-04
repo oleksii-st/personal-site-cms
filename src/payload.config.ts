@@ -3,7 +3,7 @@ import path from 'path';
 import { payloadCloud } from '@payloadcms/plugin-cloud';
 import { mongooseAdapter } from '@payloadcms/db-mongodb';
 import { webpackBundler } from '@payloadcms/bundler-webpack';
-import { slateEditor } from '@payloadcms/richtext-slate';
+import { lexicalEditor, LinkFeature } from '@payloadcms/richtext-lexical';
 import { buildConfig } from 'payload/config';
 import Users from './collections/Users';
 import { Pages } from './collections/Pages';
@@ -22,7 +22,21 @@ export default buildConfig({
     user: Users.slug,
     bundler: webpackBundler(),
   },
-  editor: slateEditor({}),
+  editor: lexicalEditor({
+    features: ({ defaultFeatures }) => [
+      ...defaultFeatures,
+      LinkFeature({
+        enabledCollections: ['pages'],
+        fields: [
+          {
+            name: 'disableIndex',
+            label: 'Disable indexation for search engines',
+            type: 'checkbox',
+          },
+        ],
+      }),
+    ],
+  }),
   collections: [Media, Pages, ReusableContent, Redirects, Users],
   globals: [Header, Footer, NotFound, Settings],
   typescript: {
