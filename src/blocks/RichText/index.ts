@@ -11,11 +11,6 @@ export const RichText: Block = {
   interfaceName: 'Richtext',
   fields: [
     {
-      type: 'text',
-      name: 'heading',
-      label: 'Heading',
-    },
-    {
       type: 'richText',
       name: 'content',
       label: 'Content',

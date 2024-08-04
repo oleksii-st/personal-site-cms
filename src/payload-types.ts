@@ -253,7 +253,6 @@ export interface Experience {
  * via the `definition` "Richtext".
  */
 export interface Richtext {
-  heading?: string | null;
   content: {
     root: {
       type: string;
