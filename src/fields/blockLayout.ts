@@ -29,7 +29,7 @@ export const blockLayout = (): Field[] => {
           type: 'number',
           name: 'breakpoint',
           label: 'Breakpoint (max with)',
-          defaultValue: 991,
+          defaultValue: 767,
         },
         {
           type: 'number',
