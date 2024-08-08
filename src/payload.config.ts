@@ -24,7 +24,9 @@ export default buildConfig({
   },
   editor: lexicalEditor({
     features: ({ defaultFeatures }) => [
-      ...defaultFeatures.filter((feature) => feature.key !== 'relationship'),
+      ...defaultFeatures.filter(
+        (feature) => feature.key !== 'relationship' && feature.key !== 'checkList',
+      ),
       LinkFeature({
         enabledCollections: ['pages'],
         fields: [
