@@ -11,11 +11,11 @@ import { Media } from './collections/Media';
 import { Header } from './globals/Header';
 import { Footer } from './globals/Footer';
 import { Settings } from './globals/Settings';
-import { Redirects } from './collections/Redirects';
 import { ReusableContent } from './collections/ReusableContent';
 import seoPlugin from '@payloadcms/plugin-seo';
 import nestedDocs from '@payloadcms/plugin-nested-docs';
 import { NotFound } from './globals/NotFound';
+import redirects from '@payloadcms/plugin-redirects';
 
 export default buildConfig({
   admin: {
@@ -39,7 +39,7 @@ export default buildConfig({
       }),
     ],
   }),
-  collections: [Media, Pages, ReusableContent, Redirects, Users],
+  collections: [Media, Pages, ReusableContent, Users],
   globals: [Header, Footer, NotFound, Settings],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
@@ -58,6 +58,9 @@ export default buildConfig({
       collections: ['pages'],
       generateLabel: (_, doc) => String(doc.title),
       generateURL: (docs) => docs.reduce((url, doc) => `${url}/${doc.slug}`, ''),
+    }),
+    redirects({
+      collections: ['pages'],
     }),
   ],
   db: mongooseAdapter({
