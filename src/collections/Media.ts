@@ -1,5 +1,7 @@
 import path from 'path';
+
 import type { CollectionConfig } from 'payload/types';
+
 import { admins } from '../access/admins';
 
 export const Media: CollectionConfig = {

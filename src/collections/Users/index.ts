@@ -1,10 +1,11 @@
 import { CollectionConfig } from 'payload/types';
+
 import adminsAndUser from './access/adminsAndUsers';
-import { anyone } from '../../access/anyone';
-import { admins } from '../../access/admins';
 import { checkRole } from './checkRole';
-import { loginAfterCreate } from './hooks/loginAfterCreate';
 import { ensureFirstUserIsAdmin } from './hooks/ensureFirstUserIsAdmin';
+import { loginAfterCreate } from './hooks/loginAfterCreate';
+import { admins } from '../../access/admins';
+import { anyone } from '../../access/anyone';
 
 const Index: CollectionConfig = {
   slug: 'users',

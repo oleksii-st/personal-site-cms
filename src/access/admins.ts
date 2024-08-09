@@ -1,4 +1,5 @@
 import type { AccessArgs } from 'payload/config';
+
 import { checkRole } from '../collections/Users/checkRole';
 import { User } from '../payload-types';
 

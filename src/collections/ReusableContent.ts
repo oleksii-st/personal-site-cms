@@ -1,13 +1,13 @@
 import type { CollectionConfig } from 'payload/types';
 
-import { Hero } from '../blocks/Hero';
 import { admins } from '../access/admins';
-import { Features } from '../blocks/Features';
-import { Optimization } from '../blocks/Optimization';
-import { Socials } from '../blocks/Socials';
 import { Contact } from '../blocks/Contact';
 import { Experience } from '../blocks/Experience';
+import { Features } from '../blocks/Features';
+import { Hero } from '../blocks/Hero';
+import { Optimization } from '../blocks/Optimization';
 import { RichText } from '../blocks/RichText';
+import { Socials } from '../blocks/Socials';
 
 export const ReusableContent: CollectionConfig = {
   slug: 'reusable-content',

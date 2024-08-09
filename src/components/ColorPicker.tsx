@@ -1,5 +1,5 @@
-import React from 'react';
 import { useField, TextInput } from 'payload/components/forms';
+import React from 'react';
 import './index.scss';
 
 export const ColorPicker: React.FC<{ path: string; name: string; label: string }> = ({

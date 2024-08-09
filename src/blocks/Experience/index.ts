@@ -1,4 +1,5 @@
 import type { Block } from 'payload/types';
+
 import { blockLayout } from '../../fields/blockLayout';
 import link from '../../fields/link';
 

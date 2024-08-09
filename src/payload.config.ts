@@ -1,21 +1,22 @@
 import path from 'path';
 
-import { payloadCloud } from '@payloadcms/plugin-cloud';
-import { mongooseAdapter } from '@payloadcms/db-mongodb';
 import { webpackBundler } from '@payloadcms/bundler-webpack';
+import { mongooseAdapter } from '@payloadcms/db-mongodb';
+import { payloadCloud } from '@payloadcms/plugin-cloud';
+import nestedDocs from '@payloadcms/plugin-nested-docs';
+import redirects from '@payloadcms/plugin-redirects';
+import seoPlugin from '@payloadcms/plugin-seo';
 import { lexicalEditor, LinkFeature } from '@payloadcms/richtext-lexical';
 import { buildConfig } from 'payload/config';
-import Users from './collections/Users';
-import { Pages } from './collections/Pages';
+
 import { Media } from './collections/Media';
-import { Header } from './globals/Header';
-import { Footer } from './globals/Footer';
-import { Settings } from './globals/Settings';
+import { Pages } from './collections/Pages';
 import { ReusableContent } from './collections/ReusableContent';
-import seoPlugin from '@payloadcms/plugin-seo';
-import nestedDocs from '@payloadcms/plugin-nested-docs';
+import Users from './collections/Users';
+import { Footer } from './globals/Footer';
+import { Header } from './globals/Header';
 import { NotFound } from './globals/NotFound';
-import redirects from '@payloadcms/plugin-redirects';
+import { Settings } from './globals/Settings';
 
 export default buildConfig({
   admin: {

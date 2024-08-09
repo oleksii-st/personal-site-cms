@@ -1,4 +1,5 @@
 import type { GlobalConfig } from 'payload/types';
+
 import color from '../fields/color';
 
 export const Settings: GlobalConfig = {

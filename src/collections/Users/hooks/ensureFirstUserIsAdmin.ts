@@ -1,5 +1,5 @@
-import type { FieldHook } from 'payload/types';
 import { User } from 'payload/auth';
+import type { FieldHook } from 'payload/types';
 
 export const ensureFirstUserIsAdmin: FieldHook<User> = async ({ req, operation, value }) => {
   if (operation === 'create') {
