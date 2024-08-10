@@ -8,6 +8,7 @@ import redirects from '@payloadcms/plugin-redirects';
 import seoPlugin from '@payloadcms/plugin-seo';
 import { lexicalEditor, LinkFeature } from '@payloadcms/richtext-lexical';
 import { buildConfig } from 'payload/config';
+import { CodeBlockFeature } from 'payload-code-block-feature';
 
 import { Media } from './collections/Media';
 import { Pages } from './collections/Pages';
@@ -37,6 +38,16 @@ export default buildConfig({
             type: 'checkbox',
           },
         ],
+      }),
+      CodeBlockFeature({
+        languages: () => {
+          return [
+            ['css', 'CSS'],
+            ['html', 'HTML'],
+            ['js', 'JavaScript'],
+            ['typescript', 'TypeScript'],
+          ];
+        },
       }),
     ],
   }),
