@@ -1,6 +1,7 @@
 import type { Block } from 'payload/types';
 
 import { blockLayout } from '../../fields/blockLayout';
+import link from '../../fields/link';
 
 export const Optimization: Block = {
   imageURL: '/media/Optimization.png',
@@ -17,10 +18,23 @@ export const Optimization: Block = {
       label: 'Heading',
     },
     {
+      type: 'text',
+      name: 'subheading',
+      label: 'Subheading',
+    },
+    link(),
+    {
       type: 'upload',
       relationTo: 'media',
       name: 'image',
       label: 'Image',
+      required: true,
+    },
+    {
+      type: 'upload',
+      relationTo: 'media',
+      name: 'imageDesktop',
+      label: 'Image (Desktop)',
       required: true,
     },
     {
