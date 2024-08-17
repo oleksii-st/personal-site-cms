@@ -2,7 +2,6 @@ import type { CollectionConfig } from 'payload/types';
 
 import { admins } from '../access/admins';
 import { Contact } from '../blocks/Contact';
-import { Experience } from '../blocks/Experience';
 import { Features } from '../blocks/Features';
 import { Hero } from '../blocks/Hero';
 import { Optimization } from '../blocks/Optimization';
@@ -35,7 +34,7 @@ export const ReusableContent: CollectionConfig = {
       name: 'layout',
       type: 'blocks',
       required: true,
-      blocks: [Hero, Features, Optimization, Socials, Contact, Experience, RichText],
+      blocks: [Hero, Features, Optimization, Socials, Contact, RichText],
     },
   ],
 };

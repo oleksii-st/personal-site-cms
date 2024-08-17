@@ -3,7 +3,6 @@ import type { CollectionConfig } from 'payload/types';
 import { admins } from '../../access/admins';
 import { adminsOrPublished } from '../../access/adminsOrPublished';
 import { Contact } from '../../blocks/Contact';
-import { Experience } from '../../blocks/Experience';
 import { Features } from '../../blocks/Features';
 import { Hero } from '../../blocks/Hero';
 import { Optimization } from '../../blocks/Optimization';
@@ -61,7 +60,6 @@ export const Pages: CollectionConfig = {
                 Optimization,
                 Socials,
                 Contact,
-                Experience,
                 RichText,
                 ReusableContentBlock,
               ],

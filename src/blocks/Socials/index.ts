@@ -21,7 +21,7 @@ export const Socials: Block = {
       type: 'array',
       name: 'socials',
       label: 'Socials',
-      minRows: 2,
+      minRows: 1,
       fields: [
         link(),
         {
