@@ -32,6 +32,13 @@ export const Settings: GlobalConfig = {
           required: true,
           defaultValue: 16,
         },
+        {
+          type: 'number',
+          name: 'horizontalPaddingsDesktop',
+          label: 'Horizontal paddings on desktop ( > 768px)',
+          required: true,
+          defaultValue: 32,
+        },
       ],
     },
     {
