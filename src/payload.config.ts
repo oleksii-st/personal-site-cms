@@ -23,6 +23,41 @@ export default buildConfig({
   admin: {
     user: Users.slug,
     bundler: webpackBundler(),
+    livePreview: {
+      url: ({ data, documentInfo }) => {
+        const baseUrl = `${process.env.PAYLOAD_PUBLIC_APP_URL}/preview?live=true`;
+        const collection = documentInfo.collection?.slug;
+        const global = documentInfo.global?.slug;
+
+        if (collection) {
+          const url = encodeURIComponent(`${collection}/${data.id}`);
+          return `${baseUrl}&url=${url}`;
+        }
+
+        if (global) {
+          const url = encodeURIComponent(`globals/${global}`);
+          return `${baseUrl}&url=${url}`;
+        }
+
+        return '';
+      },
+      collections: ['pages'],
+      globals: ['header', 'footer', 'notFound'],
+      breakpoints: [
+        {
+          label: 'Mobile',
+          name: 'mobile',
+          width: 375,
+          height: 667,
+        },
+        {
+          label: 'Desktop',
+          name: 'desktop',
+          width: 1440,
+          height: 900,
+        },
+      ],
+    },
   },
   editor: lexicalEditor({
     features: ({ defaultFeatures }) => [
@@ -78,4 +113,8 @@ export default buildConfig({
   db: mongooseAdapter({
     url: process.env.DATABASE_URI,
   }),
+  cors: [process.env.PAYLOAD_PUBLIC_APP_URL, process.env.PAYLOAD_PUBLIC_APP_URL || ''].filter(
+    Boolean,
+  ),
+  csrf: [process.env.PAYLOAD_PUBLIC_SERVER_URL || ''].filter(Boolean),
 });
