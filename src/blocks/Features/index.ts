@@ -29,6 +29,12 @@ export const Features: Block = {
           label: 'Icon',
           required: true,
         },
+        {
+          type: 'textarea',
+          name: 'description',
+          label: 'Description',
+          required: true,
+        },
       ],
     },
     ...blockLayout(),
