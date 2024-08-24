@@ -43,22 +43,43 @@ export const Settings: GlobalConfig = {
     },
     {
       type: 'collapsible',
-      label: 'Colors',
+      label: 'Colors (Light theme)',
       fields: [
         color({
-          name: 'backgroundColor',
+          name: 'backgroundColorLight',
           label: 'Background color',
           defaultValue: '#FFFFFF',
         }),
         color({
-          name: 'textColor',
+          name: 'textColorLight',
           label: 'Text color',
           defaultValue: '#141414',
         }),
         color({
-          name: 'headingsColor',
+          name: 'headingsColorLight',
           label: 'Headings color',
           defaultValue: '#000000',
+        }),
+      ],
+    },
+    {
+      type: 'collapsible',
+      label: 'Colors (Dark theme)',
+      fields: [
+        color({
+          name: 'backgroundColorDark',
+          label: 'Background color',
+          defaultValue: '#1F1F1F',
+        }),
+        color({
+          name: 'textColorDark',
+          label: 'Text color',
+          defaultValue: '#F5F5F5',
+        }),
+        color({
+          name: 'headingsColorDark',
+          label: 'Headings color',
+          defaultValue: '#FFFFFF',
         }),
       ],
     },
