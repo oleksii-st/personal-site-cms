@@ -18,18 +18,18 @@ export const Optimization: Block = {
       label: 'Heading',
     },
     {
-      type: 'text',
-      name: 'subheading',
-      label: 'Subheading',
-    },
-    link(),
-    {
       type: 'upload',
       relationTo: 'media',
       name: 'image',
       label: 'Image',
       required: true,
     },
+    {
+      type: 'text',
+      name: 'subheading',
+      label: 'Subheading',
+    },
+    link(),
     {
       type: 'upload',
       relationTo: 'media',
