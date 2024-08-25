@@ -7,11 +7,17 @@ export const Header: GlobalConfig = {
   },
   fields: [
     {
-      name: 'logo',
       label: 'Logo',
+      name: 'logo',
       type: 'text',
       required: true,
       defaultValue: 'OLEKSII_S',
+    },
+    {
+      type: 'checkbox',
+      name: 'showThemeSelect',
+      label: 'Show theme select',
+      defaultValue: true,
     },
   ],
 };
