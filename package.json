@@ -24,7 +24,7 @@
     "**/*.{ts,tsx,js,json,md}": "yarn format"
   },
   "dependencies": {
-    "@next/eslint-plugin-next": "^14.2.5",
+    "@next/eslint-plugin-next": "^14.2.6",
     "@payloadcms/bundler-webpack": "^1.0.0",
     "@payloadcms/db-mongodb": "^1.0.0",
     "@payloadcms/plugin-cloud": "^3.0.0",
