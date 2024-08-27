@@ -1,7 +1,8 @@
 name: Build Check
 on:
   push:
-    - main
+    branches:
+      - main
 jobs:
   build-check:
     runs-on: ubuntu-latest
