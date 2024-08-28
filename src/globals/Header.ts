@@ -19,5 +19,11 @@ export const Header: GlobalConfig = {
       label: 'Show theme select',
       defaultValue: true,
     },
+    {
+      type: 'checkbox',
+      name: 'test',
+      label: 'Test',
+      defaultValue: true,
+    },
   ],
 };
