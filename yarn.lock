@@ -2290,9 +2290,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@payloadcms/db-mongodb@npm:^1.0.0":
-  version: 1.5.1
-  resolution: "@payloadcms/db-mongodb@npm:1.5.1"
+"@payloadcms/db-mongodb@npm:^1.7.2":
+  version: 1.7.2
+  resolution: "@payloadcms/db-mongodb@npm:1.7.2"
   dependencies:
     bson-objectid: "npm:2.0.4"
     deepmerge: "npm:4.3.1"
@@ -2305,7 +2305,7 @@ __metadata:
     uuid: "npm:9.0.0"
   peerDependencies:
     payload: ^2.0.0
-  checksum: 10c0/2fb47ee52c462369a2141ee3c855508945ed78b0ce862e5c50bea55496d96e756273b89af648ecd42b2d17889967c52c77bac5aeea9bc9e041c4d4322449af8e
+  checksum: 10c0/76077566cbaa8e3454e3542b3532a9e81fb3a5db27af32d19924419a676eff16a0a7f0f7abb95416b1e4246c935c37ef3d078cd788df3b1e7bb87005b42b23e8
   languageName: node
   linkType: hard
 
@@ -9983,7 +9983,7 @@ __metadata:
   dependencies:
     "@next/eslint-plugin-next": "npm:^14.2.7"
     "@payloadcms/bundler-webpack": "npm:^1.0.0"
-    "@payloadcms/db-mongodb": "npm:^1.0.0"
+    "@payloadcms/db-mongodb": "npm:^1.7.2"
     "@payloadcms/eslint-config": "npm:^1.1.1"
     "@payloadcms/plugin-cloud": "npm:^3.0.0"
     "@payloadcms/plugin-nested-docs": "npm:^1.0.12"
