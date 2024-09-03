@@ -4,6 +4,11 @@ Personal Site CMS is a Payload CMS part of my personal site.
 
 Other part of the project can be found [here](https://github.com/oleksii-st/personal-site)
 
+## This repo is archived and will never be updated.
+
+The project was created with Payload 2.0 and currently deprecated.
+Payload 3.0 version which combine CMS and website parts can be found [here](https://github.com/oleksii-st/personal-site-monorepo). (Probably private repo).
+
 ## Description
 
 This project uses Payload CMS to manage content for a personal website. It includes various plugins and features for enhanced functionality.
