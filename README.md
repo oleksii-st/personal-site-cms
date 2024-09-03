@@ -1,23 +1,78 @@
-# Personal site
+# Personal Site CMS
+
+Personal Site CMS is a Payload CMS part of my personal site.
+
+Other part of the project can be found [here](https://github.com/oleksii-st/personal-site)
+
+## Description
+
+This project uses Payload CMS to manage content for a personal website. It includes various plugins and features for enhanced functionality.
+
+## Prerequisites
+
+- Node.js
+- Yarn (version 4.4.0 or later)
+- MongoDB
+
+## Installation
+
+1. Clone the repository:
+   `git clone <repository-url>`
+2. Install dependencies:
+   `yarn install`
+3. Set up your environment variables by creating a `.env` file in the root directory. Include necessary variables such as database connection strings and any API keys.
+
+## Scripts
+
+- `yarn dev`: Start the development server
+- `yarn build`: Build the project for production
+- `yarn serve`: Serve the production build
+- `yarn generate:types`: Generate TypeScript types
+- `yarn generate:graphQLSchema`: Generate GraphQL schema
+- `yarn lint`: Run ESLint
+- `yarn lint:fix`: Run ESLint and fix issues
+- `yarn format`: Format code using Prettier
 
 ## Development
 
-To spin up the project locally, follow these steps:
+To start the development server:
+`yarn dev`
+This will start the server using nodemon for auto-reloading.
 
-1. First clone the repo
-1. `yarn && yarn dev` (or `docker-compose up`, see [Docker](#docker))
-1. Now `open http://localhost:3000/admin` to access the admin panel
-1. Create your first admin user using the form on the page
+## Building for Production
 
-That's it! Changes made in `./src` will be reflected in your app.
+To build the project for production:
+`yarn build`
+This command will:
 
-## Production
+1. Copy necessary files
+2. Build Payload
+3. Build the server
 
-To run Payload in production, you need to build and serve the Admin panel. To do so, follow these steps:
+## Serving Production Build
 
-1. First invoke the `payload build` script by running `yarn build` or `npm run build` in your project root. This creates a `./build` directory with a production-ready admin bundle.
-1. Then run `yarn serve` or `npm run serve` to run Node in production and serve Payload from the `./build` directory.
+To serve the production build:
+`yarn serve`
 
-### Deployment
+## Linting and Formatting
 
-The easiest way to deploy your project is to use [Payload Cloud](https://payloadcms.com/new/import), a one-click hosting solution to deploy production-ready instances of your Payload apps directly from your GitHub repo. You can also deploy your app manually, check out the [deployment documentation](https://payloadcms.com/docs/production/deployment) for full details.
+- Run `yarn lint` to check for linting issues
+- Run `yarn lint:fix` to automatically fix linting issues
+- Run `yarn format` to format code using Prettier
+
+## Git Hooks
+
+This project uses Husky for Git hooks. The pre-commit hook runs lint-staged to ensure all staged files are formatted before committing.
+
+## Dependencies
+
+Key dependencies include:
+
+- Payload CMS
+- Express
+- MongoDB
+- Various Payload plugins (Cloud, Nested Docs, Redirects, SEO)
+- Webpack for bundling
+- TypeScript
+
+For a full list of dependencies, please refer to the `package.json` file.
