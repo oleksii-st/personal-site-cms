@@ -2351,19 +2351,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@payloadcms/plugin-cloud@npm:^3.0.0":
-  version: 3.0.1
-  resolution: "@payloadcms/plugin-cloud@npm:3.0.1"
+"@payloadcms/plugin-cloud@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "@payloadcms/plugin-cloud@npm:3.0.2"
   dependencies:
     "@aws-sdk/client-cognito-identity": "npm:^3.289.0"
     "@aws-sdk/client-s3": "npm:^3.142.0"
     "@aws-sdk/credential-providers": "npm:^3.289.0"
     "@aws-sdk/lib-storage": "npm:^3.267.0"
     amazon-cognito-identity-js: "npm:^6.1.2"
-    nodemailer: "npm:6.9.8"
+    nodemailer: "npm:6.9.9"
   peerDependencies:
     payload: ^1.8.2 || ^2.0.0
-  checksum: 10c0/a796ebbe5a658a831bd566af3b187b2de4dce5b2bbd112e9dbe091c578166aa4a3808dfe010a63a98d6a77dc4d3592f844ca005154311415a1545cd8086766c6
+  checksum: 10c0/e269d32aaef694c9d80948e0a5086c9d82671ead3786d62bb470b91c714243ea36ad3fd8629e90eceac084476a2073e4317222e3eafa220fcdcd466ec51dcf27
   languageName: node
   linkType: hard
 
@@ -9861,6 +9861,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nodemailer@npm:6.9.9":
+  version: 6.9.9
+  resolution: "nodemailer@npm:6.9.9"
+  checksum: 10c0/ba72da4ca8a003921c86f3d132d64d9bb86c1a3d79d248664b3de28f6a7a621f0476273ad7cf3ecc48d3b78a66ae4ec62b7c4c8ab6f07d9ca26d4bad4d08802e
+  languageName: node
+  linkType: hard
+
 "nodemon@npm:^2.0.6":
   version: 2.0.22
   resolution: "nodemon@npm:2.0.22"
@@ -10048,7 +10055,7 @@ __metadata:
     "@payloadcms/bundler-webpack": "npm:^1.0.0"
     "@payloadcms/db-mongodb": "npm:^1.7.2"
     "@payloadcms/eslint-config": "npm:^1.1.1"
-    "@payloadcms/plugin-cloud": "npm:^3.0.0"
+    "@payloadcms/plugin-cloud": "npm:^3.0.2"
     "@payloadcms/plugin-nested-docs": "npm:^1.0.12"
     "@payloadcms/plugin-redirects": "npm:^1.0.2"
     "@payloadcms/plugin-seo": "npm:^2.3.2"
