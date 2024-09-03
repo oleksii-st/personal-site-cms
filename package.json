@@ -34,7 +34,7 @@
     "@payloadcms/richtext-lexical": "^0.11.3",
     "@payloadcms/richtext-slate": "^1.0.0",
     "cross-env": "^7.0.3",
-    "dotenv": "^8.2.0",
+    "dotenv": "^16.4.5",
     "eslint-define-config": "^2.1.0",
     "eslint-plugin-perfectionist": "^3.2.0",
     "eslint-plugin-react": "^7.35.0",
